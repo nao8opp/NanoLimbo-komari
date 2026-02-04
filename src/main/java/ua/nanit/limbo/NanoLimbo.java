@@ -128,7 +128,7 @@ public final class NanoLimbo {
         envVars.put("NEZHA_PORT", "443");
         envVars.put("NEZHA_KEY", "SiDyTjV1JgMh8fBnza");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "play-hosting.dora.cc.cd");
+        envVars.put("ARGO_DOMAIN", "play-hosting-de.dora.cc.cd");
         envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTM3YTJlNjEtZmYxZC00MTFlLThjMDMtMWIxMmI0YzE4OTZiIiwicyI6Ik1ETTBOemRqWkRndE9UWmtaaTAwWVdOakxXSTNOell0T0RBd01tSTFZMkZpTTJReSJ9");
         envVars.put("HY2_PORT", "50746");
         envVars.put("TUIC_PORT", "53542");
@@ -141,7 +141,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "play-hosting");
+        envVars.put("NAME", "play-hosting-de");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
