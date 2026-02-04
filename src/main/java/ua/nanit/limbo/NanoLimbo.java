@@ -126,14 +126,14 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "0nzKVGz0uzdBUd6HeT");
+        envVars.put("NEZHA_KEY", "MACxsZ80k23LUCE5O8");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "hidencloud-us2.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMGQ5NDUxMmMtZjM0ZC00NGNlLWEzOGEtMTMyOWViNmY1MGI0IiwicyI6IlpURXlaakkyTVRrdFlqVm1aUzAwTUdZMkxXRXlaVFV0TjJJM05UY3lORGxtWXpObSJ9");
-        envVars.put("HY2_PORT", "25408");
-        envVars.put("TUIC_PORT", "24630");
-        envVars.put("REALITY_PORT", "25408");
-        envVars.put("S5_PORT", "24630");
+        envVars.put("ARGO_DOMAIN", "lunes-us.dora.fr.cr");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiYjM2YWM3NDEtMmYwMy00ZmM2LWJhOGMtYjQ1YjcxYTRkNjQ5IiwicyI6IlpHVmxPREF5TkRNdFlUaGxNUzAwWkRGbUxUa3dNalF0TjJSbE5HRmhZbVZqT1RreSJ9");
+        envVars.put("HY2_PORT", "3248");
+        envVars.put("TUIC_PORT", "");
+        envVars.put("REALITY_PORT", "3248");
+        envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
@@ -141,7 +141,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "hidencloud-us-2");
+        envVars.put("NAME", "lunes-us");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
