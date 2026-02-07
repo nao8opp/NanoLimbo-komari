@@ -124,24 +124,24 @@ public final class NanoLimbo {
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
         envVars.put("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "");
-        envVars.put("NEZHA_PORT", "");
-        envVars.put("NEZHA_KEY", "");
+        envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
+        envVars.put("NEZHA_PORT", "443");
+        envVars.put("NEZHA_KEY", "sKEUi0oAkVha6RvnRN");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "minestrator-fr.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiOTM5YTRhZTItY2JmOC00MDFmLWI0ZmMtNDRiODY5ODZjZjY5IiwicyI6Ik1UWTNOMkU1T1RVdE1UZGxNaTAwTmpRNExUazVZbVF0WmpkaU5HVmlaV1kzWldVeiJ9");
-        envVars.put("HY2_PORT", "25034");
-        envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "");
-        envVars.put("S5_PORT", "25034");
+        envVars.put("ARGO_DOMAIN", "lemehost-sg.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMjI2ZjhkZjItZmJhZi00NGI0LWIwMzEtNTIxNTk4ZjgxNWM2IiwicyI6Ik9EWTBOMll4TWpjdFltRm1aQzAwWTJGa0xXSTNZMlF0TmpKbU1qZ3hObUkwTnpZNCJ9");
+        envVars.put("HY2_PORT", "27016");
+        envVars.put("TUIC_PORT", "27017");
+        envVars.put("REALITY_PORT", "27017");
+        envVars.put("S5_PORT", "27016");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("ANYREALITY_PORT", "");
+        envVars.put("ANYREALITY_PORT", "27018");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "453472010");
-        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
+        envVars.put("CHAT_ID", "");
+        envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "minestrator-FR");
+        envVars.put("NAME", "lemehost");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
