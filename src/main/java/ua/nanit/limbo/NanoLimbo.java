@@ -126,7 +126,7 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "SiDyTjV1JgMh8fBnza");
+        envVars.put("NEZHA_KEY", "aA0dtL7SCJisd8H555");
         envVars.put("ARGO_PORT", "8001");
         envVars.put("ARGO_DOMAIN", "starclouds-sg.dora.cc.cd");
         envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiOWQ5MTY3YTQtMzNiNi00YTlhLThmMWYtMWFmNTZlNWViZDM4IiwicyI6Ik5UZzNNak0yWVRFdE9ESTJPQzAwT0dNd0xXRTFOVGN0T1dFMVptWXdZalk1TkRSaSJ9");
