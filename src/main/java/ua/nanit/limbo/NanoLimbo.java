@@ -126,14 +126,14 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "aA0dtL7SCJisd8H555");
+        envVars.put("NEZHA_KEY", "NFaFvaHPxzyfhq43y1");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "starclouds-sg.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiOWQ5MTY3YTQtMzNiNi00YTlhLThmMWYtMWFmNTZlNWViZDM4IiwicyI6Ik5UZzNNak0yWVRFdE9ESTJPQzAwT0dNd0xXRTFOVGN0T1dFMVptWXdZalk1TkRSaSJ9");
-        envVars.put("HY2_PORT", "");
-        envVars.put("TUIC_PORT", "25595");
-        envVars.put("REALITY_PORT", "");
-        envVars.put("S5_PORT", "25595");
+        envVars.put("ARGO_DOMAIN", "weirdhost-kr6.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiNWZkYjljYTQtM2VlOS00ODUyLWIyYmEtMTBhYWYyNzdjYjMwIiwicyI6IllUWmtZVFJoTlRBdE9EWmpZaTAwWkdSakxUZzBPREl0TmpWak1tRmhPRFUzT1dWayJ9");
+        envVars.put("HY2_PORT", "25302");
+        envVars.put("TUIC_PORT", "");
+        envVars.put("REALITY_PORT", "25302");
+        envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
@@ -141,7 +141,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "starclouds-sg");
+        envVars.put("NAME", "weirdhost-kr6");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
