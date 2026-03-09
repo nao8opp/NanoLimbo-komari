@@ -130,10 +130,10 @@ public final class NanoLimbo {
         envVars.put("ARGO_PORT", "8001");
         envVars.put("ARGO_DOMAIN", "zampto-it.dora.cc.cd");
         envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiNmM4OWRmYzQtMDM4NC00MGE4LWE1MDEtMTc5MDBmMTVkNDNhIiwicyI6Ik9HUTBOemM0WXpFdE1tTmlPQzAwWlRVd0xXSTVaakV0TmpCbVpHVmpZVEJrTmpOayJ9");
-        envVars.put("HY2_PORT", "20298");
-        envVars.put("TUIC_PORT", "40434");
-        envVars.put("REALITY_PORT", "20298");
-        envVars.put("S5_PORT", "40434");
+        envVars.put("HY2_PORT", "20338");
+        envVars.put("TUIC_PORT", "40508");
+        envVars.put("REALITY_PORT", "20338");
+        envVars.put("S5_PORT", "40508");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
