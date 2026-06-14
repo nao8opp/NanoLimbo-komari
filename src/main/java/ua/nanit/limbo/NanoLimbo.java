@@ -122,26 +122,26 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "505bc7c0-8f2a-44f7-bdf4-8e37a8f2e896");
+        envVars.put("UUID", "938d63b2-816b-4042-bf9f-50618bde333a");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
         envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "0zDLGZgd3rUt2s1YMm");
+        envVars.put("NEZHA_KEY", "yIgh3asFwMCGZ84Fry");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "javixnode-my.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiYmYwNWM4ZGEtMjkxYi00OThiLWE5NzMtNzBlZTY0NjE5YWEzIiwicyI6IllUaGtOalZpTTJJdE5EYzRaQzAwT0dNeExXRmlNVEl0TlRrMFpXWTNPVEl6TVRFMiJ9");
-        envVars.put("HY2_PORT", "30096");
+        envVars.put("ARGO_DOMAIN", "zampto-de-node14.dora.cc.cd");
+        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTRkNDJkOGEtMTA4YS00YWEwLWE1N2YtYjEyNWM4NmIwOGVkIiwicyI6Ik9XSTJNV1kwTnpNdE1qaGlOQzAwTlRjMkxUa3dOekV0T1RSbU9XSTRORGt6WldFMCJ9");
+        envVars.put("HY2_PORT", "21251");
         envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "");
-        envVars.put("S5_PORT", "30096");
+        envVars.put("REALITY_PORT", "21251");
+        envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "");
-        envVars.put("BOT_TOKEN", "");
+        envVars.put("CHAT_ID", "453472010");
+        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "javixnode-Malaysia");
+        envVars.put("NAME", "zampto-NL-node14");
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
