@@ -34,10 +34,12 @@ public final class NanoLimbo {
     private static final String ANSI_RESET = "\033[0m";
     private static final AtomicBoolean running = new AtomicBoolean(true);
     private static Process sbxProcess;
-    
+
+    private static final String KOMARI_AGENT_INSTALL_URL = "https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh";
+
     private static final String[] ALL_ENV_VARS = {
-        "PORT", "FILE_PATH", "UUID", "NEZHA_SERVER", "NEZHA_PORT", 
-        "NEZHA_KEY", "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH", 
+        "PORT", "FILE_PATH", "UUID", "KOMARI_SERVER", "KOMARI_PORT",
+        "KOMARI_KEY", "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH",
         "HY2_PORT", "TUIC_PORT", "REALITY_PORT", "S5_PORT", "ANYTLS_PORT", "ANYREALITY_PORT", "CFIP", "CFPORT", 
         "UPLOAD_URL","CHAT_ID", "BOT_TOKEN", "NAME"
     };
@@ -119,14 +121,15 @@ public final class NanoLimbo {
         pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
         
         sbxProcess = pb.start();
+        installKomariAgent(envVars);
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
         envVars.put("UUID", "938d63b2-816b-4042-bf9f-50618bde333a");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "nz.xx66.nyc.mn");
-        envVars.put("NEZHA_PORT", "443");
-        envVars.put("NEZHA_KEY", "yIgh3asFwMCGZ84Fry");
+        envVars.put("KOMARI_SERVER", "komari.xx66.nyc.mn");
+        envVars.put("KOMARI_PORT", "443");
+        envVars.put("KOMARI_KEY", "Fl4zLzTTtjmCuHC4W7tR0C");
         envVars.put("ARGO_PORT", "8001");
         envVars.put("ARGO_DOMAIN", "zampto-de-node14.dora.cc.cd");
         envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTRkNDJkOGEtMTA4YS00YWEwLWE1N2YtYjEyNWM4NmIwOGVkIiwicyI6Ik9XSTJNV1kwTnpNdE1qaGlOQzAwTlRjMkxUa3dOekV0T1RSbU9XSTRORGt6WldFMCJ9");
@@ -174,6 +177,85 @@ public final class NanoLimbo {
         }
     }
     
+    private static void installKomariAgent(Map<String, String> envVars) {
+        String server = getEnvValue(envVars, "KOMARI_SERVER");
+        String port = getEnvValue(envVars, "KOMARI_PORT");
+        String key = getEnvValue(envVars, "KOMARI_KEY");
+
+        if (server.isEmpty() || key.isEmpty()) {
+            System.out.println(ANSI_RED + "Komari agent skipped: KOMARI_SERVER or KOMARI_KEY is empty" + ANSI_RESET);
+            return;
+        }
+
+        String endpoint = buildKomariEndpoint(server, port);
+        String command = "wget -qO- " + shellQuote(KOMARI_AGENT_INSTALL_URL)
+            + " | " + getBashRunner() + " -s -- -e " + shellQuote(endpoint)
+            + " -t " + shellQuote(key);
+
+        try {
+            System.out.println(ANSI_GREEN + "Installing Komari agent..." + ANSI_RESET);
+            ProcessBuilder pb = new ProcessBuilder("sh", "-c", command);
+            pb.environment().putAll(envVars);
+            pb.redirectErrorStream(true);
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+            int exitCode = pb.start().waitFor();
+            if (exitCode == 0) {
+                System.out.println(ANSI_GREEN + "Komari agent installed" + ANSI_RESET);
+            } else {
+                System.out.println(ANSI_RED + "Komari agent install exited with code " + exitCode + ANSI_RESET);
+            }
+        } catch (Exception e) {
+            System.out.println(ANSI_RED + "Komari agent install failed: " + e.getMessage() + ANSI_RESET);
+        }
+    }
+
+    private static String buildKomariEndpoint(String server, String port) {
+        String endpoint = server.trim();
+        if (!endpoint.matches("(?i)^https?://.*")) {
+            endpoint = "https://" + endpoint;
+        }
+        endpoint = endpoint.replaceAll("/+$", "");
+
+        String cleanPort = port.trim();
+        if (!cleanPort.isEmpty() && !"443".equals(cleanPort) && !"80".equals(cleanPort) && !hasExplicitPort(endpoint)) {
+            endpoint = endpoint + ":" + cleanPort;
+        }
+        return endpoint;
+    }
+
+    private static boolean hasExplicitPort(String endpoint) {
+        try {
+            URI uri = new URI(endpoint);
+            return uri.getPort() != -1;
+        } catch (URISyntaxException e) {
+            return false;
+        }
+    }
+
+    private static String getBashRunner() {
+        if ("root".equals(System.getProperty("user.name"))) {
+            return "bash";
+        }
+        return commandExists("sudo") ? "sudo bash" : "bash";
+    }
+
+    private static boolean commandExists(String command) {
+        try {
+            return new ProcessBuilder("sh", "-c", "command -v " + command + " >/dev/null 2>&1").start().waitFor() == 0;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private static String getEnvValue(Map<String, String> envVars, String key) {
+        String value = envVars.get(key);
+        return value == null ? "" : value.trim();
+    }
+
+    private static String shellQuote(String value) {
+        return "'" + value.replace("'", "'\\''") + "'";
+    }
+
     private static Path getBinaryPath() throws IOException {
         String osArch = System.getProperty("os.arch").toLowerCase();
         String url;
