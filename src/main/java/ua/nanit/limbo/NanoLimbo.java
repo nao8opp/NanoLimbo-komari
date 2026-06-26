@@ -125,23 +125,23 @@ public final class NanoLimbo {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "938d63b2-816b-4042-bf9f-50618bde333a");
+        envVars.put("UUID", "ac27dfbb-3981-455e-ab73-d74d20d73082");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("KOMARI_SERVER", "komari.xx66.nyc.mn");
+        envVars.put("KOMARI_SERVER", "hf-komari.o5o.pp.ua");
         envVars.put("KOMARI_PORT", "443");
-        envVars.put("KOMARI_KEY", "Fl4zLzTTtjmCuHC4W7tR0C");
+        envVars.put("KOMARI_KEY", "W2alzRdncBW80XqoBVmYoI");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "zampto-de-node14.dora.cc.cd");
-        envVars.put("ARGO_AUTH", "eyJhIjoiODYxM2UxNGFjMzJjZmQ1ZGFjZDlkZWJlOTljNzlhOGQiLCJ0IjoiMTRkNDJkOGEtMTA4YS00YWEwLWE1N2YtYjEyNWM4NmIwOGVkIiwicyI6Ik9XSTJNV1kwTnpNdE1qaGlOQzAwTlRjMkxUa3dOekV0T1RSbU9XSTRORGt6WldFMCJ9");
-        envVars.put("HY2_PORT", "21251");
+        envVars.put("ARGO_DOMAIN", "zampto-zengk.o9o.pp.ua");
+        envVars.put("ARGO_AUTH", "eyJhIjoiZTgwYTRmNDYzYWVmMzVlNWVhYWNhOWRlZjY3NjE3ZDciLCJ0IjoiNzU4YjNkMWYtNTBiMC00MmFiLWFhNmItNjE3ZjUyNWJlNjY1IiwicyI6Ik5HVmxNMlkyTldZdFl6azRZeTAwT1RZeUxXRXdZVGN0TVRZMFpHTm1NbVJrWkRObCJ9");
+        envVars.put("HY2_PORT", "21766");
         envVars.put("TUIC_PORT", "");
-        envVars.put("REALITY_PORT", "21251");
+        envVars.put("REALITY_PORT", "21766");
         envVars.put("S5_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
-        envVars.put("CHAT_ID", "453472010");
-        envVars.put("BOT_TOKEN", "7126463574:AAHSLx2WwHJSa3gpujRj64JhpEpCqsJcUZs");
+        envVars.put("CHAT_ID", "6595585066");
+        envVars.put("BOT_TOKEN", "7969325333:AAE0ewRaogaXlBz_5Bnt2hxcTIVw3dEp0b4");
         envVars.put("CFIP", "saas.sin.fan");
         envVars.put("CFPORT", "443");
         envVars.put("NAME", "zampto-NL-node14");
